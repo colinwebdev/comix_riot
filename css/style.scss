@@ -1,0 +1,79 @@
+$width: 1200px;
+
+$gray100: hsl(0, 0%, 85%);
+$gray200: hsl(0, 0%, 75%);
+$gray300: hsl(0, 0%, 65%);
+$gray400: hsl(0, 0%, 55%);
+$gray500: hsl(0, 0%, 45%);
+$gray600: hsl(0, 0%, 35%);
+$gray700: hsl(0, 0%, 25%);
+$gray800: hsl(0, 0%, 15%);
+$gray900: hsl(0, 0%, 5%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $gray100;
+    max-width: $width;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+nav {
+    ul {
+        margin: 0 auto;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+    }
+}
+
+header {
+    h1 {
+        font-size: 4rem;
+        color: $gray700;
+        margin: 3rem 0 1rem 0;
+    }
+    nav {
+        background-color: $gray300;
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+    }
+    
+}
+
+.container {
+    display: flex;
+    aside {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 2rem;
+        font-size: 5rem;
+        margin-top: 5rem;
+        color: $gray500;
+    }
+}
+.comicWrap {
+    max-width: 900px;
+}
+
+.comicBox {
+    background-color: $gray200;
+    width: 900px;
+    height: 1200px;
+}
+
+.comicNav {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    padding: 1rem;
+    font-size: 4rem;
+    color: $gray400;
+}
