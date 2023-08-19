@@ -1,0 +1,160 @@
+$base-900:hsl(288, 100%, 3%);
+$base-850: hsl(288, 70%, 7%);
+$base-800:hsl(272, 30%, 12%);
+$base-700: hsl(272, 20%, 18%);
+$base-600: hsl(272, 15%, 28%);
+$base-500: hsl(272, 30%, 33%);
+$base-400: hsl(272, 30%, 50%);
+$base-400a: hsla(272, 30%, 50%, 0.345);
+$base-300: hsl(272, 20%, 60%);
+$base-200: hsl(272, 20%, 70%);
+$base-100: hsl(272, 20%, 80%);
+
+$cyan-900: hsl(196, 33%, 42%);
+$cyan-700: hsl(196, 100%, 46%);
+
+$magenta-900: hsl(320, 60%, 40%);
+$magenta-700: #E322A2;
+
+$yellow-900: #F8BC4A;
+$yellow-700:hsl(35, 100%, 78%);
+
+$bodyText: #ffffff;
+$fadedText: hsl(288, 15%, 70%);
+
+$admin: #ff41c0;
+$mod: #00aceb;
+$creator: #ffd66e;
+$reader: #fff4d9;
+$new: #ada7be;
+
+$corners: 10px;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: $bodyText;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    background-color: $base-100;
+}
+
+main {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    width: calc(100% - 14rem);
+    margin: 1rem 1rem 0 14rem;
+    padding-bottom: 2rem;
+    color: $base-900;
+    &.firstRun {
+        flex-direction: column;
+        background-color: $base-700;
+        border-radius: $corners;
+    }
+    .left, .right {
+        flex-grow: 1;
+    }
+    &.settings {
+        display: block;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $magenta-700;
+}
+
+a {
+    color: $yellow-900;
+    text-decoration: none;
+}
+
+.container {
+    // background-color: $base-700;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.top {
+    background-color: $base-900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    height: 3.5rem;
+    .logo {
+        font-size: 2rem;
+    }
+    nav {
+        padding: .5rem 1.5rem;
+        display: flex;
+        gap: 1rem;
+        a {
+            display: block;
+            font-weight: 900;
+            text-shadow: 2px 2px $magenta-900;
+            &:hover {
+                color: $magenta-700;
+                text-shadow: 2px 2px $base-500
+            }
+        }
+    }
+}
+
+aside {
+    border-right: 2px solid $base-900;
+    min-height: calc(100% - 3.5rem);
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    position: absolute;
+    top: 3.5rem;
+    bottom: 0;
+    background-color: $base-600;
+    ul {
+        list-style-type: none;
+    }
+}
+
+form {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    .formR, .formL {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: calc(50% - 1rem);
+    }
+    .formLine {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        &.blogBox {
+            margin-top: 2rem;
+        }
+    }
+    label {
+        font-weight: bold;
+    }
+    input, textarea {
+        padding: .5rem;
+        outline: none;
+    }
+    textarea {
+        overflow: auto;
+    }
+    p {
+        font-size: .85rem;
+        margin-left: 1rem;
+        color: $base-500;
+    }
+}

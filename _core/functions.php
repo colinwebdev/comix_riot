@@ -19,7 +19,15 @@
 
 // Include options for alt text and transcripts
 
+// DBs to create:
+// Paths
+// Static pages
+// Static content
+// theme list?
+
 // COMIXRIOT SETTINGS
+
+session_start();
 
 const CR_VERSION = "0.0.1";
 const DB_PREFIX = "cmxr_";
@@ -33,8 +41,24 @@ const CORE_DIR = "_core";
 const ADMIN_DIR = "_admin";
 const COMICS_DIR = "assets/pages";
 
-// DBs to create:
-// Paths
-// Static pages
-// Static content
-// theme list
+/* =============================================== 
+                INITIALIZE
+   =============================================== */
+
+$first_run = CORE_DIR.'/first_run.php';
+
+if (file_exists('_core/first_run.php')) {
+    header('location:'.$first_run);
+}
+
+/* =============================================== 
+                GLOBAL SETTINGS
+   =============================================== */
+
+// Time Zone set default
+
+/* =============================================== 
+                FUNCTIONS
+   =============================================== */
+
+//    Important stuff here
